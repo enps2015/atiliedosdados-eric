@@ -26,9 +26,9 @@ interface StoryIntroModalProps {
 }
 
 const AUTHOR_AVATAR_SRC =
-  '/assets/aistudio/WhatsApp_Image_2026-10-05_at_11.16.10__4__eea52920.jpeg';
+  `${import.meta.env.BASE_URL}assets/aistudio/WhatsApp_Image_2026-10-05_at_11.16.10__4__eea52920.jpeg`;
 const AMBASSADOR_LOGO_SRC =
-  '/assets/aistudio/Gemini_Generated_Image_7kw8z47kw8z47kw8_0d2fc02d.png';
+  `${import.meta.env.BASE_URL}assets/aistudio/Gemini_Generated_Image_7kw8z47kw8z47kw8_0d2fc02d.png`;
 
 export const StoryIntroModal: React.FC<StoryIntroModalProps> = ({
   open,
