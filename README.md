@@ -4,7 +4,7 @@
 -->
 
 <div align="center">
-  <img src="docs/assets/atelie-cover.svg" alt="Capa ilustrada do Ateliê de Dados, laboratório retrô-futurista de análise de dados em 3D" width="100%" />
+  <img src="docs/assets/atelie-cover.jpg" alt="Capa ilustrada do Ateliê de Dados, laboratório retrô-futurista de análise de dados em 3D" width="100%" />
 
   <h1>Ateliê de Dados</h1>
   <p><strong>Da curiosidade à decisão segura.</strong></p>
