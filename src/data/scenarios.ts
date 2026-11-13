@@ -309,7 +309,7 @@ export const SCENARIOS: Record<string, ScenarioDataset> = {
     storyPrologue:
       'Clara recebeu um relatório de caixa confuso: os números mostram um faturamento médio surreal de R$ 2.600 por dia, mas o dinheiro no banco não bate — e na última frente fria faltou leite e formou fila na porta. Ajude-a a investigar o lote na bancada!',
     storyEpilogue:
-      'Com os registros de R$ 23.200 corrigidos e os dados em Fahrenheit convertidos, Clara descobriu o padrão real: o frio faz a venda de bebidas quentes disparar, exigindo reforço de equipe abaixo de 18°C.',
+      'Após tratar o registro extremo de R$ 23.200 e padronizar as unidades, Clara observou, neste cenário simulado, uma associação entre temperaturas menores e maior receita. A hipótese de reforçar a equipe em dias frios ainda precisaria ser testada com dados reais.',
     question: 'Por que o caixa não fecha e como preparar a cafeteria para o frio?',
     xLabel: 'Temperatura',
     xUnit: '°C',
@@ -323,9 +323,9 @@ export const SCENARIOS: Record<string, ScenarioDataset> = {
     zUnit: 'min',
     decisionTitle: 'Reforçar estoque e baristas em frentes frias',
     decisionSummary:
-      'Cada queda de 5°C eleva a receita média de bebidas quentes em cerca de R$ 285/dia, porém aumenta o tempo de fila.',
+      'Neste conjunto sintético, uma queda de 5°C está associada a uma variação aproximada de R$ 285/dia na receita simulada. A relação não demonstra causalidade nem deve ser usada como estimativa operacional.',
     decisionAction:
-      'Escalar 1 barista extra abaixo de 18°C e preparar pré-lotes de espresso antes das 8h30.',
+      'Hipótese para testar: avaliar reforço de equipe e preparação antecipada em dias frios, comparando demanda, filas, custos e desperdício com dados reais.',
     records: [
       { id: 'c1', label: 'Dia 01 · Seg', x: 14, y: 2380, z: 7.4, category: 'Dia Útil', defect: 'none' },
       { id: 'c2', label: 'Dia 02 · Ter', x: 15, y: 2290, z: 7.1, category: 'Dia Útil', defect: 'none' },
@@ -464,7 +464,7 @@ export const SCENARIOS: Record<string, ScenarioDataset> = {
     storyPrologue:
       'Metade da turma acredita que virar a madrugada estudando garante notas mais altas. O Prof. Henrique coletou diários de sono de 32 alunos, mas o formulário veio cheio de erros de escala e um estudante digitou que dormiu 75 horas numa única noite!',
     storyEpilogue:
-      'Ao padronizar as notas e remover o erro de 75h, os tubos barométricos e a Câmara Óptica provaram que alunos com 7h a 8,5h de sono e menos tela à noite superaram em 22 pontos quem dormiu pouco.',
+      'Após padronizar as escalas e isolar o registro impossível de 75h, o conjunto simulado mostrou diferença de 22 pontos entre grupos com padrões de sono distintos. É uma associação ilustrativa, não uma prova de que dormir mais causou notas maiores.',
     question: 'Dormir menos para revisar até tarde ajuda ou atrapalha o desempenho?',
     xLabel: 'Horas de Sono',
     xUnit: 'h',
@@ -478,9 +478,9 @@ export const SCENARIOS: Record<string, ScenarioDataset> = {
     zUnit: 'min',
     decisionTitle: 'Higiene do sono impacta mais que horas extras de revisão',
     decisionSummary:
-      'Estudantes entre 7h e 8,5h de sono tiveram média 22 pontos superior aos que dormiram menos de 5,5h com alto uso de telas.',
+      'Neste conjunto sintético, o grupo entre 7h e 8,5h de sono apresentou média 22 pontos superior ao grupo com menos de 5,5h e alto uso de telas. O resultado é ilustrativo e não permite inferir causalidade.',
     decisionAction:
-      'Desligar telas 45 min antes de dormir e priorizar 7,5h de sono na véspera das provas.',
+      'Hipótese educativa: discutir hábitos de sono e uso de telas com base em evidências científicas independentes; estes dados simulados não justificam uma recomendação individual de saúde.',
     records: [
       { id: 's1', label: 'Estudante 01', x: 4.8, y: 54, z: 115, category: 'Pouco Sono', defect: 'none' },
       { id: 's2', label: 'Estudante 02', x: 5.0, y: 58, z: 105, category: 'Pouco Sono', defect: 'none' },
@@ -570,7 +570,7 @@ export const SCENARIOS: Record<string, ScenarioDataset> = {
     storyPrologue:
       'O painel da prefeitura acusou um pico misterioso de 1.890 viagens de bicicleta numa madrugada de garoa! Marina trouxe os registros de telemetria para descobrir o defeito no sensor e encontrar a melhor janela para manutenção da frota.',
     storyEpilogue:
-      'Isolado o contador defeituoso de 1.890 viagens e corrigido o pluviômetro em décimos de milímetro, Marina provou que chuvas acima de 8 mm reduzem o uso em 62% — criando a janela ideal para oficina.',
+      'Após isolar o pico sintético de 1.890 viagens e corrigir a unidade do pluviômetro, Marina observou neste cenário uma associação entre chuva e menor volume de viagens. A hipótese de usar períodos chuvosos para manutenção exigiria validação com dados operacionais reais.',
     question: 'Qual sensor falhou e quando recolher bicicletas sem prejudicar usuários?',
     xLabel: 'Chuva',
     xUnit: 'mm',
@@ -584,9 +584,9 @@ export const SCENARIOS: Record<string, ScenarioDataset> = {
     zUnit: '%',
     decisionTitle: 'Redistribuição preventiva antes da chuva da tarde',
     decisionSummary:
-      'Acima de 8 mm de chuva, a demanda cai 62%, permitindo recolher bicicletas para manutenção preventiva sem afetar usuários.',
+      'Neste conjunto sintético, registros acima de 8 mm de chuva aparecem associados a uma redução de 62% na demanda simulada. Isso não garante que a retirada de bicicletas não afete usuários.',
     decisionAction:
-      'Concentrar manutenção da frota em janelas chuvosas (> 8 mm) e reforçar estações centrais em manhãs secas.',
+      'Hipótese para testar: planejar janelas de manutenção considerando previsão do tempo, demanda observada, disponibilidade da frota e impacto sobre os usuários.',
     records: [
       { id: 'b1', label: '08h · Seco', x: 0, y: 340, z: 88, category: 'Seco', defect: 'none' },
       { id: 'b2', label: '09h · Seco', x: 0.5, y: 325, z: 84, category: 'Seco', defect: 'none' },
