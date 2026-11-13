@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Ateliê de Dados — Laboratório 3D</title>
+<desc id="desc">Ilustração vetorial de um laboratório retrô-futurista com bancada de madeira, frascos, tubos de ensaio, balança e monitor CRT.</desc>
+<defs>
+ <linearGradient id="bg" x2="0" y2="1"><stop stop-color="#080d18"/><stop offset="1" stop-color="#202b3b"/></linearGradient>
+ <linearGradient id="wood" x2="0" y2="1"><stop stop-color="#bd8960"/><stop offset=".5" stop-color="#79513d"/><stop offset="1" stop-color="#422f2b"/></linearGradient>
+ <linearGradient id="glass" x2="1" y2="1"><stop stop-color="#d9faff" stop-opacity=".8"/><stop offset=".5" stop-color="#6ed9e9" stop-opacity=".18"/><stop offset="1" stop-color="#f5ffff" stop-opacity=".65"/></linearGradient>
+ <linearGradient id="gold" x2="0" y2="1"><stop stop-color="#fff0a8"/><stop offset=".5" stop-color="#e5a33c"/><stop offset="1" stop-color="#8c5720"/></linearGradient>
+ <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1600" height="900" fill="url(#bg)"/>
+<g fill="#58d9ef" opacity=".55"><circle cx="130" cy="160" r="3"/><circle cx="340" cy="260" r="2"/><circle cx="1410" cy="180" r="3"/><circle cx="1280" cy="340" r="2"/><circle cx="900" cy="120" r="2"/><circle cx="720" cy="300" r="3"/><circle cx="1500" cy="530" r="2"/></g>
+<path d="M0 620 Q800 510 1600 620 V900 H0Z" fill="#111b2a"/>
+<path d="M120 590 L1480 590 L1400 690 L200 690Z" fill="url(#wood)" stroke="#e5a33c" stroke-width="5"/>
+<path d="M200 690 L260 840 M1400 690 L1340 840" stroke="#754a35" stroke-width="35" stroke-linecap="round"/>
+<path d="M170 610 H1430" stroke="#f8d58a" stroke-width="5" opacity=".7"/>
+<!-- flask -->
+<g transform="translate(310 300)" filter="url(#glow)">
+ <path d="M95 0 H165 V85 L235 250 Q245 285 210 295 H45 Q10 285 25 250 L95 85Z" fill="url(#glass)" stroke="url(#gold)" stroke-width="9"/>
+ <path d="M52 220 Q125 190 208 220 L232 270 Q230 290 205 290 H48 Q25 285 32 260Z" fill="#46d6b9" opacity=".65"/>
+ <path d="M95 0 H165" stroke="#fff1c4" stroke-width="16"/>
+ <path d="M125 30 V200" stroke="#fff" stroke-opacity=".65" stroke-width="8"/>
+</g>
+<!-- tubes -->
+<g transform="translate(650 350)" stroke="url(#gold)" stroke-width="7">
+ <path d="M0 0 V210 M55 0 V210 M110 0 V210 M165 0 V210 M220 0 V210" fill="none"/>
+ <path d="M-15 210 H235" stroke-width="13"/>
+ <g fill="url(#glass)" stroke="#c7f7ff"><path d="M-18 0 H18 V145 Q0 180 -18 145Z"/><path d="M37 0 H73 V145 Q55 180 37 145Z"/><path d="M92 0 H128 V145 Q110 180 92 145Z"/><path d="M147 0 H183 V145 Q165 180 147 145Z"/><path d="M202 0 H238 V145 Q220 180 202 145Z"/></g>
+ <g fill="#6dd9e8" stroke="none"><path d="M-14 95 H14 V145 Q0 170 -14 145Z"/><path d="M41 65 H69 V145 Q55 170 41 145Z"/><path d="M96 112 H124 V145 Q110 170 96 145Z"/><path d="M151 80 H179 V145 Q165 170 151 145Z"/><path d="M206 45 H234 V145 Q220 170 206 145Z"/></g>
+</g>
+<!-- balance -->
+<g transform="translate(970 360)" stroke="url(#gold)" stroke-width="10" fill="none">
+ <path d="M0 35 H260 M130 35 V250 M75 250 H185"/>
+ <path d="M35 35 L0 150 M225 35 L260 150"/>
+ <path d="M-55 150 Q0 215 55 150Z" fill="#5ed5e5" fill-opacity=".35"/>
+ <path d="M205 150 Q260 215 315 150Z" fill="#f0b64e" fill-opacity=".35"/>
+ <circle cx="130" cy="35" r="17" fill="#ffe6a0"/>
+</g>
+<!-- CRT -->
+<g transform="translate(1290 360)">
+ <rect x="0" y="0" width="250" height="205" rx="28" fill="#80583f" stroke="url(#gold)" stroke-width="10"/>
+ <rect x="22" y="22" width="205" height="145" rx="15" fill="#101e2b" stroke="#63d9e8" stroke-width="5"/>
+ <path d="M42 58 H205 M42 82 H180 M42 106 H194 M42 130 H150" stroke="#52d7df" stroke-width="7" opacity=".8"/>
+ <circle cx="238" cy="55" r="7" fill="#ffbd4a"/><circle cx="238" cy="92" r="7" fill="#ffbd4a"/>
+</g>
+<g font-family="Inter,Segoe UI,Arial,sans-serif" fill="#f5f7fb">
+ <text x="105" y="130" font-size="28" letter-spacing="8" fill="#62ddeb" font-weight="700">LABORATÓRIO RETRÔ SCI-FI 3D</text>
+ <text x="100" y="225" font-size="76" font-weight="800">ATELIÊ DE DADOS</text>
+ <text x="105" y="285" font-size="30" fill="#d5deeb">Da curiosidade à decisão segura.</text>
+ <rect x="105" y="325" width="430" height="5" rx="3" fill="url(#gold)"/>
+ <text x="105" y="390" font-size="23" fill="#aebed0">Explore. Prepare. Analise. Experimente. Comunique.</text>
+</g>
+</svg>
