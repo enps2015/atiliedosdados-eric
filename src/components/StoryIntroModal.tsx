@@ -93,9 +93,11 @@ export const StoryIntroModal: React.FC<StoryIntroModalProps> = ({
                 </div>
                 <p className="text-xs sm:text-[13px] text-[#E2E8F0] leading-relaxed">
                   Você não precisa programar nem gostar de fórmulas para entender
-                  dados. O <strong className="text-[#F8FAFC]">Ateliê de Dados</strong>{' '}
-                  transforma 3 casos reais (Cafeteria, Sono & Notas e Bicicletas)
-                  em 6 instrumentos táteis para ensinar na prática{' '}
+                  dados. Todos os registros são sintéticos e foram criados
+                  exclusivamente para fins didáticos. O <strong className="text-[#F8FAFC]">Ateliê de Dados</strong>{' '}
+                  explora 3 cenários simulados inspirados em situações cotidianas
+                  (Cafeteria, Sono & Notas e Bicicletas), usando 6 instrumentos
+                  interativos para ensinar na prática{' '}
                   <span className="text-[#22D3EE]">
                     Outliers, Padronização de Escala, Média vs. Mediana,
                     Correlação/R² e Sensibilidade das Válvulas
@@ -258,7 +260,7 @@ export const StoryIntroModal: React.FC<StoryIntroModalProps> = ({
                   </div>
                   <div className="grid grid-cols-3 gap-2 text-xs">
                     <a
-                      href="https://www.linkedin.com/in/ericpimentel-dados/"
+                      href="https://www.linkedin.com/in/eric-np-santos/"
                       target="_blank"
                       rel="noopener noreferrer"
                       title="LinkedIn: linkedin.com/in/ericpimentel-dados"
