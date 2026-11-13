@@ -69,6 +69,60 @@ Os cenários usam contextos cotidianos para demonstrar que análise de dados nã
 - **Glossário 3D:** consulta contextual de conceitos e instrumentos.
 - **Terminal CRT:** sínteses didáticas e leituras dos resultados em uma interface retrô.
 
+## 🖼️ O laboratório por dentro
+
+As capturas abaixo são imagens reais da aplicação, registradas durante a exploração dos três cenários. A galeria prioriza telas que demonstram a experiência 3D, a aprendizagem guiada e os recursos de análise.
+
+<div align="center">
+  <img src="docs/screenshots/atelie_dos_dados02.png" alt="Visão geral da bancada 3D do Ateliê de Dados, com seis instrumentos interativos" width="100%" />
+  <p><em>Bancada completa: seis estações conectadas em um laboratório tridimensional.</em></p>
+</div>
+
+<table>
+  <tr>
+    <td width="50%" align="center">
+      <img src="docs/screenshots/atelie_dos_dados03.png" alt="Guia passo a passo da primeira etapa, inspeção dos dados brutos no cenário Cafeteria" width="100%" />
+      <sub><strong>Aprendizagem guiada</strong><br/>Inspeção do lote bruto e instruções contextuais.</sub>
+    </td>
+    <td width="50%" align="center">
+      <img src="docs/screenshots/atelie_dos_dados04.png" alt="Painel de desafio interativo sobre outliers no cenário Cafeteria" width="100%" />
+      <sub><strong>Desafios práticos</strong><br/>Perguntas que exigem interpretar os dados.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <img src="docs/screenshots/atelie_dos_dados05.png" alt="Glossário 3D com explicação de dados brutos e instrumentos do laboratório" width="100%" />
+      <sub><strong>Glossário 3D</strong><br/>Conceitos explicados no contexto dos instrumentos.</sub>
+    </td>
+    <td width="50%" align="center">
+      <img src="docs/screenshots/atelie_dos_dados06.png" alt="Terminal CRT com síntese de resultados do cenário Cafeteria" width="100%" />
+      <sub><strong>Comunicação de resultados</strong><br/>Terminal CRT com síntese e indicadores didáticos.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <img src="docs/screenshots/atelie_dos_dados08.png" alt="Bancada 3D no cenário Sono e Notas" width="100%" />
+      <sub><strong>Cenário Sono &amp; Notas</strong><br/>O mesmo laboratório aplicado a outro contexto.</sub>
+    </td>
+    <td width="50%" align="center">
+      <img src="docs/screenshots/atelie_dos_dados10.png" alt="Simulação interativa de horas de sono e sensibilidade das válvulas" width="100%" />
+      <sub><strong>Simulação de cenários</strong><br/>Controles interativos para explorar hipóteses.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <img src="docs/screenshots/atelie_dos_dados13.png" alt="Estação de exploração de relações e agrupamentos no cenário Bicicletas" width="100%" />
+      <sub><strong>Cenário Bicicletas</strong><br/>Exploração de tendências e agrupamentos em 3D.</sub>
+    </td>
+    <td width="50%" align="center">
+      <img src="docs/screenshots/atelie_dos_dados15.png" alt="Terminal CRT com relatório de padrões encontrados no cenário Bicicletas" width="100%" />
+      <sub><strong>Relatório CRT</strong><br/>Leitura contextual dos padrões do cenário.</sub>
+    </td>
+  </tr>
+</table>
+
+<sub>As 15 capturas originais estão preservadas em <a href="docs/screenshots/">docs/screenshots/</a>. A galeria seleciona nove imagens para manter o README visual sem repetir telas semelhantes.</sub>
+
 ## 🎯 Objetivos educacionais
 
 Ao explorar o laboratório, a pessoa é convidada a:
@@ -290,7 +344,7 @@ O desenvolvimento pode evoluir de forma incremental, priorizando confiabilidade 
 - [ ] Adicionar testes automatizados para cálculos estatísticos e regras de progressão.
 - [ ] Realizar testes de interface em navegadores e dispositivos móveis.
 - [ ] Documentar controles de câmera, áudio e acessibilidade.
-- [ ] Incorporar capturas de tela otimizadas ao README para demonstrar os três cenários e os modos de aprendizagem.
+- [x] Incorporar capturas reais ao README para demonstrar os três cenários e os modos de aprendizagem. (15 originais preservadas; 9 selecionadas para a galeria.)
 
 Sugestões e relatos de problemas são bem-vindos por meio das [Issues do repositório](https://github.com/enps2015/atiliedosdados-eric/issues).
 
