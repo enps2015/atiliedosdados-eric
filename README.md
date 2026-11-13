@@ -4,6 +4,8 @@
 
 **Acesso ao laboratório:** https://enps2015.github.io/atiliedosdados-eric/
 
+> **Dados sintéticos:** todos os registros dos três cenários são simulados e servem exclusivamente para aprendizagem. Resultados e recomendações são exemplos de interpretação, não evidências empíricas nem orientações operacionais.
+
 ## Sobre o projeto
 
 O Ateliê de Dados é uma experiência educacional aberta que apresenta etapas fundamentais de um pipeline de análise de dados sem exigir experiência prévia em programação. A pessoa aprende manipulando instrumentos virtuais e observando como decisões de preparação e análise alteram os resultados.
