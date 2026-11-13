@@ -1,10 +1,13 @@
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
-import {defineConfig} from 'vite';
+import { defineConfig } from 'vite';
 
 export default defineConfig(() => {
   return {
+    // GitHub Pages publica este projeto em /atiliedosdados-eric/.
+    // Em outros provedores, defina VITE_BASE_PATH=/ quando necessário.
+    base: process.env.VITE_BASE_PATH || '/atiliedosdados-eric/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
