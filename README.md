@@ -24,6 +24,10 @@ O projeto é independente de área de formação, religião, cor, gênero ou pre
 
 Estudantes, educadores, profissionais e pessoas curiosas de qualquer área que queiram compreender como dados são coletados, preparados, analisados e usados para apoiar decisões.
 
+## Precisa de uma chave de IA?
+
+Não. O laboratório funciona no navegador: os cenários, interações e cálculos são executados no próprio dispositivo. A versão publicada não exige chave Gemini, serviço de backend ou cadastro para experimentar.
+
 ## Como começar
 
 1. Abra o laboratório pelo link publicado.
@@ -83,7 +87,7 @@ Belém — Pará — Brasil
 
 - GitHub: https://github.com/enps2015
 - Instagram: https://www.instagram.com/eric.n.pimentel/
-- LinkedIn: https://www.linkedin.com/in/ericpimentel-dados/
+- LinkedIn: https://www.linkedin.com/in/eric-np-santos/
 
 ## Licença
 
