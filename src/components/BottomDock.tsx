@@ -198,9 +198,9 @@ export const BottomDock: React.FC<BottomDockProps> = ({
             })}
           </div>
 
-          {/* Clean Unboxed Live Quality Readout */}
+          {/* Live readout of applied cleaning controls, not a global data-quality score */}
           <div className="hidden lg:flex items-center gap-2 text-xs text-[#94A3B8] shrink-0">
-            <span>Qualidade:</span>
+            <span>Etapas aplicadas:</span>
             <span
               className={`font-mono tabular-nums font-semibold ${
                 stats.qualityScore >= 80 ? 'text-[#34D399]' : 'text-[#F59E0B]'
@@ -553,7 +553,7 @@ export const BottomDock: React.FC<BottomDockProps> = ({
               </div>
 
               <div className="font-mono tabular-nums text-[#94A3B8] shrink-0">
-                Consistência: {Math.round(stats.rSquared * 100)}% · Qualidade:{' '}
+                R²: {Math.round(stats.rSquared * 100)}% · Etapas:{' '}
                 {stats.qualityScore}%
               </div>
             </div>
