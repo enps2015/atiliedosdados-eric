@@ -28,12 +28,12 @@ export function buildDidacticReport(
   if (!pipeline.normalizeScale) missingFilters.push('escalas misturadas');
 
   const reliabilityBadge = isClean
-    ? 'Leitura Confiável (100%)'
+    ? 'Etapas de limpeza aplicadas (100%)'
     : `Atenção: Qualidade em ${stats.qualityScore}%`;
 
   const reliabilityNote = isClean
-    ? `Todos os ${stats.discardedCount} registros defeituosos foram isolados. Os ${stats.validCount} dados restantes revelam o padrão real sem distorções.`
-    : `Ainda há ${missingFilters.join(', ')} no lote. Números sujos escondem a tendência real e puxam a média para fora da realidade — passe na Estação 02 para limpar.`;
+    ? `Os quatro controles didáticos de limpeza estão ativados. Isso indica que as etapas foram aplicadas nesta simulação; não certifica, por si só, a qualidade ou a ausência de vieses nos dados.`
+    : `Ainda há etapas não aplicadas (${missingFilters.join(', ')}). Observe como os registros problemáticos alteram os resultados. Neste laboratório, valores ausentes podem aparecer como zero para ilustrar uma imputação inadequada; isso não é uma recomendação de tratamento.`;
 
   const meanStr = formatOutputValue(scenario, stats.meanY);
   const medianStr = formatOutputValue(scenario, stats.medianY);
@@ -45,7 +45,7 @@ export function buildDidacticReport(
   const majorityVsAverageNote =
     gapRatio > 0.14
       ? `Atenção ao truque dos extremos: a Média marca ${meanStr}, mas a maioria real (Mediana) está em ${medianStr}. Poucos valores gigantes estão enganando a conta!`
-      : `Média (${meanStr}) e Mediana (${medianStr}) caminham bem próximas. Isso prova que nenhum valor absurdo está distorcendo a turma inteira.`;
+      : `Média (${meanStr}) e mediana (${medianStr}) estão próximas neste lote. Essa proximidade, isoladamente, não prova que os dados estejam livres de erros ou vieses.`;
 
   let trendDirectionLabel = 'Sem direção clara no lote atual';
   let trendIcon: 'up' | 'down' | 'flat' = 'flat';
@@ -71,10 +71,10 @@ export function buildDidacticReport(
 
   const strengthPlainText =
     r2Pct >= 75
-      ? `Sinal muito firme (${r2Pct}% de consistência): os pontos formam uma trilha clara, dando segurança para planejar.`
+      ? `Associação linear forte no conjunto simulado (R² = ${r2Pct}%). O ajuste descreve estes registros, mas não garante previsão fora deles nem demonstra causalidade.`
       : r2Pct >= 45
-      ? `Sinal moderado (${r2Pct}% de consistência): existe um caminho visível, mas outros fatores do dia a dia também pesam.`
-      : `Sinal fraco ou encoberto (${r2Pct}%): os pontos estão espalhados demais — confira se faltou filtrar erros na Centrífuga.`;
+      ? `Associação linear moderada no conjunto simulado (R² = ${r2Pct}%). Outros fatores podem influenciar o resultado; não interprete o ajuste como causa.`
+      : `Associação linear fraca neste conjunto (R² = ${r2Pct}%). Verifique a qualidade dos dados e considere que uma relação não linear também pode existir.`;
 
   // Group comparison + hidden 3rd variable (z)
   const groupBuckets = new Map<
@@ -130,7 +130,7 @@ export function buildDidacticReport(
       id: 'tip-median',
       ruleTitle: '1. Compare a Maioria (Mediana) com a Média',
       plainLesson:
-        'A Média soma tudo e divide; um único erro gigante já engana o resultado. A Mediana olha só para quem está bem no meio da fila.',
+        'A média soma os valores e divide pela quantidade; extremos podem influenciá-la bastante. A mediana é o valor central após ordenar os registros.',
       liveExample:
         gapRatio > 0.14
           ? `Neste lote agora: Média ${meanStr} vs. Mediana ${medianStr} — sinal claro de extremos distorcendo!`
@@ -140,7 +140,7 @@ export function buildDidacticReport(
       id: 'tip-trend',
       ruleTitle: '2. Veja a Direção e o Aperto dos Pontos',
       plainLesson:
-        'A inclinação mostra se as coisas sobem ou descem juntas. Já a Consistência (%) mostra se os pontos obedecem à linha ou estão bagunçados.',
+        'A inclinação descreve a direção da associação linear. O R² resume a proporção da variação de Y explicada pelo ajuste linear neste conjunto; não mede causalidade nem garante generalização.',
       liveExample: `Neste caso: ${r2Pct}% de consistência com variação de ${deltaSign}${formattedDelta} a cada ${stepUnit} ${scenario.xUnit}.`,
     },
     {
@@ -158,7 +158,7 @@ export function buildDidacticReport(
       ruleTitle: '4. Caminhar Junto não Prova Causa Única',
       plainLesson:
         'Mesmo quando duas medidas andam juntas, procure um terceiro fator escondido nos bastidores antes de concluir a história.',
-      liveExample: `Aqui vale vigiar também "${scenario.zLabel}" (${scenario.zUnit}), que acompanha as mudanças de perto.`,
+      liveExample: `Considere também "${scenario.zLabel}" (${scenario.zUnit}) como possível variável contextual. Sua presença não demonstra, sozinha, que ela explique a associação observada.`,
     },
   ];
 
